@@ -1,0 +1,6 @@
+[user]
+	email = angus.chadney@gmail.com
+	name = anguschadney
+[core]
+	editor = vi
+	excludesfile = ~/.gitignore

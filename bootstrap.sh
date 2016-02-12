@@ -1,0 +1,28 @@
+t -d ~/dotfiles || git clone --recursive
+https://github.com/anguschadney ~/dotfiles
+
+pushd ~/dotfiles >/dev/null
+
+function create_link {
+    # move any existing files (but overwrite existing symlinks)
+
+    TIMESTAMP=$(date +'%Y-%m-%d_%H:%M:%S')
+    src=$1
+    target=$2
+
+    if [[ -e "$HOME/$target" && ! -h "$HOME/$target" ]]
+    then
+        mv "$HOME/$target" "$HOME/$target$TIMESTAMP"
+    fi
+                        
+    ln -sf "$HOME/$src" "$HOME/$target"
+}
+                       
+create_link "dotfiles/bashrc"           ".bashrc"
+create_link "dotfiles/devilspie"        ".devilspie"
+create_link "dotfiles/gitconfig"        ".gitconfig"
+create_link "dotfiles/gitignore"        ".gitignore"
+create_link "dotfiles/jupyter"          ".jupyter"
+create_link "dotfiles/vim/vimrc"        ".vimrc"
+           
+popd >/dev/null
