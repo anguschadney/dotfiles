@@ -4,7 +4,7 @@ filetype plugin indent on
 let mapleader = "\<Space>"
 
 set number
-set clipboard=unnamed
+set clipboard+=unnamed
 set title
 
 set textwidth=79  " lines longer than 79 columns will be broken
@@ -31,7 +31,7 @@ let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
-let g:syntastic_python_flake8_args='--ignore=D100,D103'
+let g:syntastic_python_flake8_args='--ignore=D100,D101,D102,D103'
 
 " Gundo
 nnoremap <F5> :GundoToggle<CR>
@@ -45,3 +45,5 @@ nnoremap <Leader>w :w<CR>
 " save and quit
 nnoremap <Leader>q :wq<CR>
 
+" pastetoggle
+set pastetoggle=<F2>
