@@ -1,5 +1,5 @@
 #!/bin/bash
-test -d ~/dotfiles || git clone --recursive https://github.com/anguschadney ~/dotfiles
+test -d ~/dotfiles || git clone --recursive https://github.com/anguschadney/dotfiles ~/dotfiles
 
 pushd ~/dotfiles >/dev/null
 
