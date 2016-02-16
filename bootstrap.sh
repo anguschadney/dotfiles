@@ -18,11 +18,13 @@ function create_link {
     ln -sf "$HOME/$src" "$HOME/$target"
 }
                        
-create_link "/dotfiles/bashrc"           ".bashrc"
+create_link "/dotfiles/bashrc"          ".bashrc"
 create_link "dotfiles/devilspie"        ".devilspie"
 create_link "dotfiles/gitconfig"        ".gitconfig"
 create_link "dotfiles/gitignore"        ".gitignore"
 create_link "dotfiles/jupyter"          ".jupyter"
-create_link "dotfiles/vimrc"        ".vimrc"
+create_link "dotfiles/vimrc"            ".vimrc"
+create_link "dotfiles/pdbrc.py"         ".pdbrc.py"
+create_link "dotfiles/pdbrc"            ".pdbrc"
            
 popd >/dev/null
