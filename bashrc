@@ -119,3 +119,6 @@ fi
 export WORKON_HOME=$HOME/.venvs
 export PROJECT_HOME=$HOME/Devel
 source ~/.local/bin/virtualenvwrapper.sh
+
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'

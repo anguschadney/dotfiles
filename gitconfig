@@ -4,3 +4,5 @@
 [core]
 	editor = vi
 	excludesfile = ~/.gitignore
+[hub]
+	host = github.com/tempusenergy
