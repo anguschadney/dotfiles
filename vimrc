@@ -1,7 +1,7 @@
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
-let mapleader = "\<Space>"
+let mapleader = ","
 
 """"""""""""""""""""""""""""""""""""""
 " Package list:
@@ -32,7 +32,27 @@ set expandtab     " insert spaces when hitting TABs
 set softtabstop=4 " insert/delete 4 spaces when hitting a TAB/BACKSPACE
 set shiftround    " round indent to multiple of 'shiftwidth'
 set encoding=utf-8
+
+set timeout " Do time out on mappings and others
+set timeoutlen=2000 " Wait {num} ms before timing out a mapping
+
+" When you’re pressing Escape to leave insert mode in the terminal, it will by
+" default take a second or another keystroke to leave insert mode completely
+" and update the statusline. This fixes that. I got this from:
+" https://powerline.readthedocs.org/en/latest/tipstricks.html#vim
+if !has('gui_running')
+    set ttimeoutlen=10
+    augroup FastEscape
+        autocmd!
+        au InsertEnter * set timeoutlen=0
+        au InsertLeave * set timeoutlen=1000
+    augroup END
+endif
+
 let python_highlight_all=1
+
+" Set bracket match colors
+hi MatchParen cterm=bold ctermfg=white ctermfg=red
 
 " Airline
 set laststatus=2
@@ -66,18 +86,3 @@ nnoremap <Leader>q :wq<CR>
 " pastetoggle
 set pastetoggle=<F2>
 
-set timeout         " Do time out on mappings and others
-set timeoutlen=2000 " Wait {num} ms before timing out a mapping
-
-" When you’re pressing Escape to leave insert mode in the terminal, it will by
-" default take a second or another keystroke to leave insert mode completely
-" and update the statusline. This fixes that. I got this from:
-" https://powerline.readthedocs.org/en/latest/tipstricks.html#vim
-if !has('gui_running')
-    set ttimeoutlen=10
-    augroup FastEscape
-        autocmd!
-        au InsertEnter * set timeoutlen=0
-        au InsertLeave * set timeoutlen=0
-    augroup END
-endif
