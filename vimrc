@@ -3,6 +3,24 @@ syntax on
 filetype plugin indent on
 let mapleader = "\<Space>"
 
+""""""""""""""""""""""""""""""""""""""
+" Package list:
+"
+" Pathogen
+"
+" ctrlp
+" gundo
+" nerdcommenter
+" syntastic
+" vim-airline
+" vim-airline-themes
+" vim-autoclose
+" vim-fugitive
+" vim-python-pep8-indent
+" YouCompleteMe
+"
+""""""""""""""""""""""""""""""""""""""
+
 set number
 set clipboard+=unnamed
 set title
