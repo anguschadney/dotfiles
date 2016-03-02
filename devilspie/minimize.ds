@@ -1,7 +1,0 @@
-(if
-    (is (application_name) "Tempus - Slack")
-    (begin
-       (minimize)
-       (pin)
-    )
-)
