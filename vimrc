@@ -74,11 +74,20 @@ nnoremap <F5> :GundoToggle<CR>
 " delete current buffer
 nnoremap <leader>d :bd<CR>
 
+" next buffer
+nnoremap <leader>n :bnext<CR>
+
+" previous buffer
+nnoremap <leader>p :bprev<CR>
+
 " save
 nnoremap <Leader>w :w<CR>
 
 " save and quit
 nnoremap <Leader>q :wq<CR>
+
+" insert pdb
+nnoremap <leader>d oimport pdb; pdb.set_trace()<Esc>
 
 " pastetoggle
 set pastetoggle=<F2>
