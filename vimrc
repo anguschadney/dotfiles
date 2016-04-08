@@ -9,6 +9,7 @@ let mapleader = ","
 " Pathogen
 "
 " ctrlp
+" jedi
 " gundo
 " nerdcommenter
 " syntastic
