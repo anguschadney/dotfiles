@@ -25,7 +25,8 @@ set number
 set clipboard+=unnamed
 set title
 
-set textwidth=79  " lines longer than 79 columns will be broken
+set textwidth=0   " Do not break long lines
+set wrapmargin=0  " do not wrap lines "
 set shiftwidth=4  " operation >> indents 4 columns; << unindents 4 columns
 set tabstop=4     " a hard TAB displays as 4 columns
 set expandtab     " insert spaces when hitting TABs
@@ -87,7 +88,7 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :wq<CR>
 
 " insert pdb
-nnoremap <leader>d oimport pdb; pdb.set_trace()<Esc>
+nnoremap <leader>pdb oimport pdb; pdb.set_trace()<Esc>
 
 " pastetoggle
 set pastetoggle=<F2>
