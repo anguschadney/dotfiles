@@ -6,3 +6,5 @@
 	excludesfile = ~/.gitignore
 [hub]
 	host = github.com/tempusenergy
+[push]
+	default = simple
