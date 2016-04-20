@@ -91,6 +91,9 @@ nnoremap <Leader>q :wq<CR>
 " insert pdb
 nnoremap <leader>pdb oimport pdb; pdb.set_trace()<Esc>
 
+" insert pdb
+nnoremap <c-o> :CtrlPBuffer<CR>
+
 " pastetoggle
 set pastetoggle=<F2>
 
