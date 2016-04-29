@@ -97,3 +97,6 @@ nnoremap <c-o> :CtrlPBuffer<CR>
 " pastetoggle
 set pastetoggle=<F2>
 
+" psql formatting
+au BufNewFile,BufRead *.pgsql                   setf pgsql
+au BufNewFile,BufRead *.psql                    setf pgsql
