@@ -69,6 +69,9 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 
+" Javascript highlighting
+let g:javascript_enable_domhtmlcss = 1
+
 " Gundo
 nnoremap <F5> :GundoToggle<CR>
 
