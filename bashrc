@@ -122,3 +122,6 @@ source ~/.local/bin/virtualenvwrapper.sh
 
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
+
+export PATH=/usr/local/cuda/bin:$PATH
+export LD_LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/local/cuda/lib64:$LD_LIBRARY_PATH

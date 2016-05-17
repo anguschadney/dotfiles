@@ -18,7 +18,6 @@ let mapleader = ","
 " vim-autoclose
 " vim-fugitive
 " vim-python-pep8-indent
-" YouCompleteMe
 "
 """"""""""""""""""""""""""""""""""""""
 
@@ -91,7 +90,7 @@ nnoremap <Leader>q :wq<CR>
 " insert pdb
 nnoremap <leader>pdb oimport pdb; pdb.set_trace()<Esc>
 
-" insert pdb
+" CtrlP buffer
 nnoremap <c-o> :CtrlPBuffer<CR>
 
 " pastetoggle

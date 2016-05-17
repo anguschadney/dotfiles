@@ -21,6 +21,7 @@ function create_link {
 create_link "/dotfiles/bashrc"          ".bashrc"
 create_link "dotfiles/gitconfig"        ".gitconfig"
 create_link "dotfiles/gitignore"        ".gitignore"
+create_link "dotfiles/jshint"           ".jshint"
 create_link "dotfiles/jupyter"          ".jupyter"
 create_link "dotfiles/vimrc"            ".vimrc"
 create_link "dotfiles/pdbrc.py"         ".pdbrc.py"
