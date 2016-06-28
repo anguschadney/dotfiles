@@ -1,5 +1,7 @@
 execute pathogen#infect()
-syntax on
+syntax enable
+set background=dark
+colorscheme solarized
 filetype plugin indent on
 let mapleader = ","
 
@@ -49,6 +51,7 @@ augroup FastEscape
 augroup END
 
 let python_highlight_all=1
+let python_version_2=1
 
 " Set bracket match colors
 hi MatchParen cterm=bold ctermfg=white ctermfg=red
