@@ -15,6 +15,7 @@ let mapleader = ","
 " gundo
 " jedi
 " nerdcommenter
+" nerdtree
 " python-syntax
 " syntastic
 " vim-airline
@@ -114,3 +115,10 @@ au BufNewFile,BufRead *.psql                    setf pgsql
 let b:csv_headerline = 1
 let g:csv_autocmd_arrange = 1
 let g:csv_autocmd_arrange_size = 1024*1024
+
+" NERDtree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+map <F6> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree"
