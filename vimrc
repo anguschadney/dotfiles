@@ -1,8 +1,8 @@
 execute pathogen#infect()
-syntax enable
 set background=dark
 colorscheme solarized
 filetype plugin indent on
+syntax enable
 let mapleader = ","
 
 """"""""""""""""""""""""""""""""""""""
@@ -11,14 +11,17 @@ let mapleader = ","
 " Pathogen
 "
 " ctrlp
-" jedi
+" csv
 " gundo
+" jedi
 " nerdcommenter
+" python-syntax
 " syntastic
 " vim-airline
 " vim-airline-themes
 " vim-autoclose
 " vim-fugitive
+" vim-javascript
 " vim-python-pep8-indent
 "
 """"""""""""""""""""""""""""""""""""""
@@ -58,10 +61,11 @@ hi MatchParen cterm=bold ctermfg=white ctermfg=red
 
 " Airline
 set laststatus=2
-set t_Co=256
 set noshowmode
-let g:airline_powerline_fonts = 1
+set t_Co=256
+let g:airline_powerline_fonts=1
 let g:airline_theme='bubblegum'
+let g:airline#extensions#tabline#enabled=1
 
 " Syntastic
 set statusline+=%#warningmsg#
@@ -82,10 +86,10 @@ nnoremap <F5> :GundoToggle<CR>
 nnoremap <leader>d :bd<CR>
 
 " next buffer
-nnoremap <leader>n :bnext<CR>
+nnoremap <Tab> :bnext<CR>
 
 " previous buffer
-nnoremap <leader>p :bprev<CR>
+nnoremap <S-Tab> :bprev<CR>
 
 " save
 nnoremap <Leader>w :w<CR>
@@ -105,3 +109,8 @@ set pastetoggle=<F2>
 " psql formatting
 au BufNewFile,BufRead *.pgsql                   setf pgsql
 au BufNewFile,BufRead *.psql                    setf pgsql
+
+" CSV
+let b:csv_headerline = 1
+let g:csv_autocmd_arrange = 1
+let g:csv_autocmd_arrange_size = 1024*1024
