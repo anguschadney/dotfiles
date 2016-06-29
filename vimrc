@@ -84,7 +84,7 @@ let g:javascript_enable_domhtmlcss = 1
 nnoremap <F5> :GundoToggle<CR>
 
 " delete current buffer
-nnoremap <leader>d :bd<CR>
+nnoremap <leader>dd :bd<CR>
 
 " next buffer
 nnoremap <Tab> :bnext<CR>
@@ -93,10 +93,10 @@ nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprev<CR>
 
 " save
-nnoremap <Leader>w :w<CR>
+nnoremap <Leader>ww :w<CR>
 
 " save and quit
-nnoremap <Leader>q :wq<CR>
+nnoremap <Leader>qq :wq<CR>
 
 " insert pdb
 nnoremap <leader>pdb oimport pdb; pdb.set_trace()<Esc>
