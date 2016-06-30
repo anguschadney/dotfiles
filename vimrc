@@ -22,6 +22,7 @@ let mapleader = ","
 " vim-airline-themes
 " vim-autoclose
 " vim-fugitive
+" vim-gitgutter
 " vim-javascript
 " vim-python-pep8-indent
 "
@@ -57,8 +58,16 @@ augroup END
 let python_highlight_all=1
 let python_version_2=1
 
+" highlight bg at column 80
+if v:version >= 703
+    set cc=80
+end
+
 " Set bracket match colors
 hi MatchParen cterm=bold ctermfg=white ctermfg=red
+
+" GitGutter
+set updatetime=250
 
 " Airline
 set laststatus=2
