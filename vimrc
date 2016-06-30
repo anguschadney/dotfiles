@@ -110,8 +110,9 @@ nnoremap <Leader>qq :wq<CR>
 " insert pdb
 nnoremap <leader>pdb oimport pdb; pdb.set_trace()<Esc>
 
-" CtrlP buffer
+" CtrlP buffer and MRU
 nnoremap <c-o> :CtrlPBuffer<CR>
+nnoremap <c-i> :CtrlPMRU<CR>
 
 " pastetoggle
 set pastetoggle=<F2>
@@ -127,7 +128,6 @@ let g:csv_autocmd_arrange_size = 1024*1024
 
 " NERDTree
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map <F6> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree"
