@@ -21,6 +21,7 @@ let mapleader = ","
 " vim-airline
 " vim-airline-themes
 " vim-autoclose
+" vim-devicons
 " vim-fugitive
 " vim-gitgutter
 " vim-javascript
