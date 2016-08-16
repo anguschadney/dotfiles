@@ -131,7 +131,5 @@ export GREP_OPTIONS='--color=auto'
 
 # Colorize LS
 alias ls='ls --color'
-LS_COLORS='di=1:fi=34:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35:*.rpm=90:*.py=33:*.pyc=36:*.ipynb=31:*.txt=32'
-export LS_COLORS
 
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
