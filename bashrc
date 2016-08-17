@@ -124,6 +124,6 @@ export LD_LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/local/cuda/lib64:
 export GREP_OPTIONS='--color=auto'
 
 # LS alias
-alias l='ls -lAhtr'
+alias l='ls -lFAhtr'
 
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
