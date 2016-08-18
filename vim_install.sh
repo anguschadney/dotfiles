@@ -5,18 +5,23 @@ test -d ~/.vim/bundle || mkdir -p ~/.vim/bundle
 # install pathogen
 echo -e "Installing pathogen\n"
 cd ~/.vim/autoload
-test -e pathogen.vim || curl -LSso pathogen.vim https://tpo.pe/pathogen.vim
+test -e pathogen.vim || curl -Lso pathogen.vim https://tpo.pe/pathogen.vim
 
 # install fonts and symbols for airline
 test -d ~/.local/share/fonts || mkdir -p ~/.local/share/fonts
 function install_nerd_font {
     name=$1
     path=$2
-    echo -e "Installing $name\n"
+    base_url=https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/
+    echo "Installing $name"
     cd ~/.local/share/fonts
-    test -e "$name" || curl -fLo "$name" "https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/$path"
+    test -e "$name" || curl -Lso "$name" $base_url$path
 }
-install_nerd_font "Ubuntu Mono derivative Powerline Nerd Font Complete Mono.ttf" "UbuntuMono/Regular/complete/Ubuntu%20Mono%20derivative%20Powerline%20Nerd%20Font%20Complete%20Mono.ttf"
+install_nerd_font "Ubuntu Mono derivative Powerline Nerd Font Complete Mono.ttf" \
+    "UbuntuMono/Regular/complete/Ubuntu%20Mono%20derivative%20Powerline%20Nerd%20Font%20Complete%20Mono.ttf"
+install_nerd_font "Droid Sans Mono for Powerline Nerd Font Complete.ttf" \
+    "DroidSansMono/complete/Droid%20Sans%20Mono%20for%20Powerline%20Nerd%20Font%20Complete.otf"
+echo ""
 
 function install_plugin {
     # clone into plugins directory if dest doesn't exist
