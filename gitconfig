@@ -2,9 +2,9 @@
 	email = angus.chadney@gmail.com
 	name = anguschadney
 [core]
-	editor = vi
+	editor = vim
 	excludesfile = ~/.gitignore
 [hub]
-	host = github.com/tempusenergy
+	host = github.com/anguschadney
 [push]
 	default = simple

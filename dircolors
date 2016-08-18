@@ -162,7 +162,7 @@ EIGHTBIT 1
 # global default
 NORMAL 00
 # normal file
-FILE 01
+FILE 37
 # directory
 DIR 34
 # 777 directory
