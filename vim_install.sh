@@ -8,18 +8,23 @@ cd ~/.vim/autoload
 test -e pathogen.vim || curl -LSso pathogen.vim https://tpo.pe/pathogen.vim
 
 # install fonts and symbols for airline
-echo -e "Installing fonts\n"
 test -d ~/.local/share/fonts || mkdir -p ~/.local/share/fonts
-cd ~/.local/share/fonts
-test -e "Ubuntu Mono derivative Powerline Nerd Font Complete Mono.ttf" || curl -fLo "Ubuntu Mono derivative Powerline Nerd Font Complete Mono.ttf" https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/UbuntuMono/Regular/complete/Ubuntu%20Mono%20derivative%20Powerline%20Nerd%20Font%20Complete%20Mono.ttf
+function install_nerd_font {
+    name=$1
+    path=$2
+    echo -e "Installing $name\n"
+    cd ~/.local/share/fonts
+    test -e "$name" || curl -fLo "$name" "https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/$path"
+}
+install_nerd_font "Ubuntu Mono derivative Powerline Nerd Font Complete Mono.ttf" "UbuntuMono/Regular/complete/Ubuntu%20Mono%20derivative%20Powerline%20Nerd%20Font%20Complete%20Mono.ttf"
 
 function install_plugin {
     # clone into plugins directory if dest doesn't exist
     path=$1
     name=${path##*/}
-    cd ~/.vim/bundle
     echo "Installing $name"
-    test -d $name || git clone "git://github.com/$path"
+    cd ~/.vim/bundle
+    test -d "$name" || git clone "git://github.com/$path"
 }
 
 install_plugin "chrisbra/csv.vim"
