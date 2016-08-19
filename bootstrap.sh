@@ -18,6 +18,7 @@ function create_link {
     ln -sf "$HOME/$src" "$HOME/$target"
 }
                        
+create_link "/dotfiles/ackrc"           ".ackrc"
 create_link "/dotfiles/bashrc"          ".bashrc"
 create_link "/dotfiles/dircolors"       ".dircolors"
 create_link "dotfiles/gitconfig"        ".gitconfig"
