@@ -43,7 +43,7 @@ esac
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
-#force_color_prompt=yes
+force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -85,7 +85,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -111,19 +111,18 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Virtualenvwrapper
 export WORKON_HOME=$HOME/.venvs
 source ~/.local/bin/virtualenvwrapper.sh
 
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
-
+# Cuda
 export PATH=/usr/local/cuda/bin:$PATH
 export LD_LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 
-# Auto grep colour
-export GREP_OPTIONS='--color=auto'
-
-# LS alias
-alias l='ls -lAhtr --file-type'
-
+# Java`
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+
+# Aliases
+alias l='ls -lAhtr --file-type'
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
