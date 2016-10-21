@@ -97,10 +97,10 @@ nnoremap <F5> :GundoToggle<CR>
 nnoremap <leader>dd :bd<CR>
 
 " next buffer
-nnoremap <Tab> :bnext<CR>
+nnoremap <Leader>nn :bnext<CR>
 
 " previous buffer
-nnoremap <S-Tab> :bprev<CR>
+nnoremap <Leader>pp :bprev<CR>
 
 " save
 nnoremap <Leader>ww :w<CR>
