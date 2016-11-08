@@ -133,3 +133,7 @@ map <F6> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree"
 let g:WebDevIconsNerdTreeGitPluginForceVAlign=1
+
+" Markdown syntax
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
