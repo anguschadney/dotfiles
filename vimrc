@@ -12,6 +12,7 @@ let mapleader = ","
 "
 " ctrlp
 " csv
+" easymotion
 " gundo
 " jedi
 " nerdcommenter
