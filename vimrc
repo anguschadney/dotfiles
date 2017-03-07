@@ -76,7 +76,7 @@ set laststatus=2
 set noshowmode
 set t_Co=256
 let g:airline_powerline_fonts=1
-let g:airline_theme='bubblegum'
+let g:airline_theme='solarized'
 let g:airline#extensions#tabline#enabled=1
 
 " Syntastic
