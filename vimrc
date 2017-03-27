@@ -41,7 +41,14 @@ set tabstop=4     " a hard TAB displays as 4 columns
 set expandtab     " insert spaces when hitting TABs
 set softtabstop=4 " insert/delete 4 spaces when hitting a TAB/BACKSPACE
 set shiftround    " round indent to multiple of 'shiftwidth'
+set cursorline    " highlight current line
 set encoding=utf-8
+
+set incsearch           " search as characters are entered
+set hlsearch            " highlight matches
+
+" turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR>
 
 set timeout " Do time out on mappings and others
 set timeoutlen=2000 " Wait {num} ms before timing out a mapping
