@@ -1,2 +1,3 @@
 [flake8]
 ignore = D100,D101,D102,D103,D104,D202,D203,D205,D300,D400
+exclude = adhoc.py, *settings.py, constants.py
