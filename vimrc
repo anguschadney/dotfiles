@@ -64,8 +64,13 @@ augroup FastEscape
     au InsertLeave * set timeoutlen=1000
 augroup END
 
+" Python
 let python_highlight_all=1
 let python_version_2=1
+
+" Javascript 
+let g:javascript_enable_domhtmlcss = 1
+autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab
 
 " highlight bg at column 80
 if v:version >= 703
@@ -95,9 +100,6 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_javascript_checkers = ['eslint']
-
-" Javascript highlighting
-let g:javascript_enable_domhtmlcss = 1
 
 " Gundo
 nnoremap <F5> :GundoToggle<CR>
