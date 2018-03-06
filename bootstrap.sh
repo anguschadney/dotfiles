@@ -21,6 +21,7 @@ function create_link {
 create_link "dotfiles/ackrc"            ".ackrc"
 create_link "dotfiles/bashrc"           ".bashrc"
 create_link "dotfiles/dircolors"        ".dircolors"
+create_link "dotfiles/eslintrc"         ".eslintrc"
 create_link "dotfiles/gitconfig"        ".gitconfig"
 create_link "dotfiles/gitignore"        ".gitignore"
 create_link "dotfiles/jshint"           ".jshint"
