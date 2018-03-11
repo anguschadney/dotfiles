@@ -129,6 +129,7 @@ export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 alias l='ls -lAhtr --file-type'
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
+alias atom='atom --safe --disable-gpu'
 
 # enable ctrl-s
 stty -ixon
