@@ -116,7 +116,7 @@ fi
 
 # Virtualenvwrapper
 export WORKON_HOME=$HOME/.venvs
-source ~/.local/bin/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper.sh
 
 # Cuda
 export PATH=/usr/local/cuda/bin:$PATH
