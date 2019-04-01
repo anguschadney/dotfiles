@@ -1,6 +1,6 @@
 execute pathogen#infect()
 set background=dark
-colorscheme atom-dark-256
+colorscheme solarized
 filetype plugin indent on
 syntax enable
 let mapleader = ","
