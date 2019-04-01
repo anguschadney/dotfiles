@@ -1,11 +1,17 @@
 #!/bin/bash
 test -d ~/.vim/autoload || mkdir -p ~/.vim/autoload
 test -d ~/.vim/bundle || mkdir -p ~/.vim/bundle
+test -d ~/.vim/colors || mkdir -p ~/.vim/colors
 
 # install pathogen
 echo -e "Installing pathogen\n"
 cd ~/.vim/autoload
 test -e pathogen.vim || curl -Lso pathogen.vim https://tpo.pe/pathogen.vim
+
+# install pathogen
+echo -e "Installing Solarized theme\n"
+cd ~/.vim/colors
+echo -e "Download https://github.com/altercation/vim-colors-solarized/raw/master/colors/solarized.vim\n"
 
 # install fonts and symbols for airline
 test -d ~/.local/share/fonts || mkdir -p ~/.local/share/fonts
