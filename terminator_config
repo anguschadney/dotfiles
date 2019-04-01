@@ -1,0 +1,42 @@
+[global_config]
+  suppress_multiple_term_dialog = True
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = aeb49ed7-f5a5-4db2-a52c-ac9d171dc429
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 67:27
+      size = 1853, 1025
+      title = gus@gus-pc: ~
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 924
+      ratio = 0.5
+      type = HPaned
+    [[[terminal2]]]
+      order = 0
+      parent = child1
+      profile = default
+      type = Terminal
+      uuid = aeb49ed7-f5a5-4db2-a52c-ac9d171dc429
+    [[[terminal3]]]
+      order = 1
+      parent = child1
+      profile = default
+      type = Terminal
+      uuid = 631d4ec5-b155-4419-9b3f-c9365a21933a
+[plugins]
+[profiles]
+  [[default]]
+    # solarized-dark
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    foreground_color = "#eee8d5"
+    background_color = "#002b36"
+    cursor_color = "#eee8d5"
