@@ -115,6 +115,7 @@ if ! shopt -oq posix; then
 fi
 
 # Virtualenvwrapper
+export VIRTUALENVWRAPPER_PYTHON='/usr/bin/python3'
 export WORKON_HOME=$HOME/.venvs
 source /usr/local/bin/virtualenvwrapper.sh
 
@@ -133,3 +134,26 @@ alias atom='atom --disable-gpu'
 
 # enable ctrl-s
 stty -ixon
+
+# Flutter
+export PATH=/home/gus/dev/flutter/bin:$PATH
+
+# Put this function to your .bashrc file.
+# Usage: mv oldfilename
+# If you call mv without the second parameter it will prompt you to edit the filename on command line.
+# Original mv is called when it's called with more than one argument.
+# It's useful when you want to change just a few letters in a long name.
+#
+# Also see:
+# - imv from renameutils
+# - Ctrl-W Ctrl-Y Ctrl-Y (cut last word, paste, paste)
+
+function mv() {
+  if [ "$#" -ne 1 ] || [ ! -e "$1" ]; then
+    command mv "$@"
+    return
+  fi
+
+  read -ei "$1" newfilename
+  command mv -v -- "$1" "$newfilename"
+}
