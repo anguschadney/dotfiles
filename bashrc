@@ -124,7 +124,7 @@ export PATH=/usr/local/cuda/bin:$PATH
 export LD_LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 
 # Java`
-export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
 # Aliases
 alias l='ls -lAhtr --file-type'
@@ -157,3 +157,10 @@ function mv() {
   read -ei "$1" newfilename
   command mv -v -- "$1" "$newfilename"
 }
+
+# Google service account creds
+export GOOGLE_APPLICATION_CREDENTIALS="/home/gus/dev/keys/deazy-dw-489742ef03f8.json"
+
+complete -C /usr/bin/terraform terraform
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
