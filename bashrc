@@ -164,3 +164,4 @@ export GOOGLE_APPLICATION_CREDENTIALS="/home/gus/dev/keys/deazy-dw-489742ef03f8.
 complete -C /usr/bin/terraform terraform
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+alias codef='code $(fzf)'
